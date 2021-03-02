@@ -23,6 +23,7 @@
 // Files includes  -------------------------------------------------------------
 #include "HAL_nvic.h"
 
+#pragma default_function_attributes = @ "MY_FUNC"
 ////////////////////////////////////////////////////////////////////////////////
 /// @addtogroup MM32_Hardware_Abstract_Layer
 /// @{
@@ -175,7 +176,7 @@ void SysTick_CLKSourceConfig(u32 SysTick_CLKSource)
     (SysTick_CLKSource == SysTick_CLKSource_HCLK) ? (SysTick->CTRL |= SysTick_CLKSource_HCLK)
                                                   : (SysTick->CTRL &= SysTick_CLKSource_HCLK_Div8);
 }
-
+#pragma default_function_attributes =
 /// @}
 
 /// @}

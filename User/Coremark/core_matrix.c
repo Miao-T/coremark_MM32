@@ -48,6 +48,7 @@ void   matrix_add_const(ee_u32 N, MATDAT *A, MATDAT val);
 #define matrix_big(x)            (0xf000 | (x))
 #define bit_extract(x, from, to) (((x) >> (from)) & (~(0xffffffff << (to))))
 
+#pragma default_function_attributes = @ "MY_FUNC"
 #if CORE_DEBUG
 void
 printmat(MATDAT *A, ee_u32 N, char *name)
@@ -357,3 +358,4 @@ matrix_mul_matrix_bitextract(ee_u32 N, MATRES *C, MATDAT *A, MATDAT *B)
         }
     }
 }
+#pragma default_function_attributes =

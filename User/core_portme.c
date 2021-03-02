@@ -78,7 +78,7 @@ volatile ee_s32 seed5_volatile = 0;
 #define EE_TICKS_PER_SEC 1000
 __IO uint32_t Tick;
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-
+#pragma default_function_attributes = @ "MY_FUNC"
 /* Function : start_time
         This function will be called right before starting the timed portion of
    the benchmark.
@@ -225,5 +225,6 @@ PUTCHAR_PROTOTYPE { /* Place your implementation of fputc here */ /* e.g. write 
     UART_SendData(UART1, (uint8_t)ch);
     return ch; 
 }
+#pragma default_function_attributes =
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////

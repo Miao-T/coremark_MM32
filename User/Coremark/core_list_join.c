@@ -66,6 +66,7 @@ list_head *core_list_mergesort(list_head *   list,
                                list_cmp      cmp,
                                core_results *res);
 
+#pragma default_function_attributes = @ "MY_FUNC"
 ee_s16
 calc_func(ee_s16 *pdata, core_results *res)
 {
@@ -595,3 +596,4 @@ core_list_mergesort(list_head *list, list_cmp cmp, core_results *res)
     return list;
 #endif
 }
+#pragma default_function_attributes =

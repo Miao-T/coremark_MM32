@@ -36,6 +36,7 @@ the switch/if behaviour, we are using a small moore machine.
         (see core_state.png).
 */
 
+#pragma default_function_attributes = @ "MY_FUNC"
 /* Function: core_bench_state
         Benchmark function
 
@@ -328,3 +329,4 @@ core_state_transition(ee_u8 **instr, ee_u32 *transition_count)
     *instr = str;
     return state;
 }
+#pragma default_function_attributes =

@@ -39,6 +39,8 @@ extern volatile ee_s32 seed2_volatile;
 extern volatile ee_s32 seed3_volatile;
 extern volatile ee_s32 seed4_volatile;
 extern volatile ee_s32 seed5_volatile;
+
+#pragma default_function_attributes = @ "MY_FUNC"
 ee_s32
 get_seed_32(int i)
 {
@@ -247,3 +249,4 @@ check_data_types()
     }
     return retval;
 }
+#pragma default_function_attributes =

@@ -25,6 +25,8 @@
 #include "common.h"
 u8 tbPresc[] = {0, 0, 0, 0, 1, 2, 3, 4, 1, 2, 3, 4, 6, 7, 8, 9};
 
+#pragma default_function_attributes = @ "MY_FUNC"
+
 ////////////////////////////////////////////////////////////////////////////////
 /// @addtogroup MM32_Hardware_Abstract_Layer
 /// @{
@@ -1230,6 +1232,7 @@ void exRCC_Set_OSC_ITRIM_Config(u32 val)
   RCC->CONFIG |= val;
 }
 #endif
+#pragma default_function_attributes =
 
 /// @}
 

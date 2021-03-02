@@ -26,6 +26,7 @@
 #include "HAL_gpio.h"
 #include "HAL_dma.h"
 
+#pragma default_function_attributes = @ "MY_FUNC"
 ////////////////////////////////////////////////////////////////////////////////
 /// @addtogroup MM32_Hardware_Abstract_Layer
 /// @{
@@ -422,7 +423,7 @@ void UART_AutoBaudRateSet(UART_TypeDef* uart, UARTABR_FE_TypeDef fedge, \
     WRITE_REG(uart->ABRCR, (u16)(fedge | ledge | cnt | state));
 }
 #endif
-
+#pragma default_function_attributes =
 // following is ShanghaiAETeam ??chend delete 0827
 ////////////////////////////////////////////////////////////////////////////////
 /// @brief  AutoBaudRate.
